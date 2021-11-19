@@ -6,7 +6,7 @@ import firebase from "firebase/compat/app";
 const Login = () => {
   const date = new Date();
   const currentYear = date.getFullYear();
-  const googleRedirect = new firebase.auth.GoogleAuthProvider();
+  // const googleRedirect = ;
 
   return (
     <>
@@ -15,7 +15,9 @@ const Login = () => {
           <h2>Hello, Welcome to Chat App</h2>
           <div
             className="login-button google"
-            onClick={() => auth.signInWithRedirect(googleRedirect)}
+            onClick={() =>
+              auth.signInWithRedirect(new firebase.auth.GoogleAuthProvider())
+            }
           >
             <GoogleCircleFilled
               style={{
